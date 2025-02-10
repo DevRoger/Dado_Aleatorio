@@ -14,16 +14,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Elementos del activity
         val txtNumber: TextView = findViewById(R.id.txtNumber)
         val mainActivity: LinearLayout = findViewById(R.id.main)
         val imgDice: ImageView = findViewById(R.id.imgDice)
 
         mainActivity.setOnClickListener {
             // Mostrar el GIF de animación
-            Glide.with(this).load(R.drawable.dice) // Reemplaza con el nombre de tu archivo GIF
+            Glide.with(this).load(R.drawable.dice)
                 .into(imgDice) // Aquí se carga el GIF en el ImageView
 
-            // Simular el tiempo de la animación (por ejemplo, 1 segundo)
+            // Simular el tiempo de la animación
             Handler(Looper.getMainLooper()).postDelayed(
                 {
                     val randomNumber = (1..6).random()
@@ -57,8 +59,7 @@ class MainActivity : AppCompatActivity() {
                         val mediaPlayer = MediaPlayer.create(this, audioResourceId)
                         mediaPlayer.start()
                     }
-                }, 1500 // Ajusta el tiempo de animación según lo que necesites
-                                                       )
+                }, 1500) // Tiempo de animación
         }
     }
 }
