@@ -34,4 +34,4 @@ Este proyecto está bajo la Licencia MIT.
 
 ## 📬 Contacto
 
-Para preguntas o sugerencias, contáctame en [tu_email@dominio.com].
+Para preguntas o sugerencias, contáctame en ralonsop2324@politecnics.barcelona
